@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
+
 
 class SignInPage extends StatefulWidget {
   SignInPage({Key key}) : super(key: key);
@@ -79,7 +82,7 @@ class _SignInPageState extends State<SignInPage> {
         TextField(
           decoration: InputDecoration(
               hintText: 'Password',
-              suffix:Icon(Icons.visibility)
+              suffixIcon:Icon(Icons.visibility)
           ),
         ),
 
@@ -103,13 +106,78 @@ class _SignInPageState extends State<SignInPage> {
               minWidth: MediaQuery.of(context).size.width,
               padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
               onPressed: () {},
-              child: Text("Login",
-                  textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.blue),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(Icons.check,color: Colors.blue,),
+                   Text("Login",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.blue),
                   ),
+
+                ],
+
+              ),
+
             ),
-          )
+          ),
         ),
+        SizedBox(height: 10,),
+           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "Dont have an account?",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 10
+                ),
+              ),
+              Text(
+                "Register",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15
+                  ),
+
+              )
+            ],
+          ),
+        SizedBox(height: 10,),
+        Text(
+          "Continue With",
+          style: TextStyle(
+              color: Colors.grey,
+              fontSize: 18,
+            fontWeight: FontWeight.bold
+          ),
+
+        ),
+        SizedBox(height: 10,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+
+               InkWell(
+                 child: CircleAvatar(
+                   backgroundImage: AssetImage("assets/images/google.png"),
+                   radius: 25,
+                 ),
+               ),
+            InkWell(
+            child: CircleAvatar(
+              backgroundImage: AssetImage("assets/images/face.png"),
+              radius: 18,
+            ),
+            )
+
+
+
+
+
+          ],
+        )
+
 
       ],
     );
