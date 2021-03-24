@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gokartapp/HomePage.dart';
+import 'package:gokartapp/SignInPage.dart';
 
 
 class LoginPage extends StatefulWidget {
+  static String id = 'LoginPage';
   LoginPage({Key key}) : super(key: key);
 
   @override
@@ -54,7 +57,7 @@ class _LoginPage extends State<LoginPage> {
                     fontSize: 35
                 ),
               ),
-              onPressed: (){},
+              onPressed: (){Navigator.pushNamed(context, SignInPage.id);},
             ),
           ],
         ),
@@ -104,7 +107,7 @@ class _LoginPage extends State<LoginPage> {
             child: MaterialButton(
               // minWidth: MediaQuery.of(context).size.width,
               padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-              onPressed: () {},
+              onPressed: () {Navigator.pushNamed(context, HomePage.id);},
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[

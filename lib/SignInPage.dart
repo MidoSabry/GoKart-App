@@ -1,15 +1,20 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
+
+import 'package:gokartapp/LoginPage.dart';
 
 
 
 class SignInPage extends StatefulWidget {
+  static String id = 'SignInPage';
   @override
   _SignInPage createState() => _SignInPage();
 }
 
 class _SignInPage extends State<SignInPage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +23,7 @@ class _SignInPage extends State<SignInPage> {
           child: Container(
             alignment: Alignment.center,
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: buildBody(),
+            child: buildBody(context),
           ),
         ),
       ),
@@ -26,7 +31,8 @@ class _SignInPage extends State<SignInPage> {
   }
 }
 
-Widget buildBody() {
+Widget buildBody(BuildContext context) {
+
   return Column(
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
@@ -43,7 +49,7 @@ Widget buildBody() {
               ),
 
             ),
-            onPressed: (){},
+            onPressed: (){Navigator.pushNamed(context, LoginPage.id);},
           ),
           SizedBox(width: 90,),
           FlatButton(

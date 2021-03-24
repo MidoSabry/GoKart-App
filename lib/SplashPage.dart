@@ -1,8 +1,31 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:gokartapp/LoginPage.dart';
 
+class SplashPage extends StatefulWidget {
+  static String id = 'LoginScreen';
+  @override
+  _SplashPageState createState() => _SplashPageState();
+}
 
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    startTimer();
+  }
+  startTimer(){
+    var duration = Duration(seconds: 3);
+    return Timer(duration,route);
+  }
+  route(){
+    Navigator.pushReplacement(context, MaterialPageRoute(
+      builder: (context)=>LoginPage()
+    ));
+  }
 
-class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,9 +96,13 @@ class SplashPage extends StatelessWidget {
           ),
         ),
       ),
-    );
+    );;
   }
 }
+
+
+
+
 
 
 
