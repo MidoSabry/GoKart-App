@@ -22,7 +22,7 @@ class _SplashPageState extends State<SplashPage> {
                   color: Colors.blueAccent,
                 ),
               ),
-              Positioned.fill(
+              Container(
                   child: Container(
                     alignment: Alignment.center,
                     child: Column(

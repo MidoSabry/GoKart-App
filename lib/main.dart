@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gokartapp/HomePage.dart';
 import 'package:gokartapp/SignInPage.dart';
 
+
+import 'LoginPage.dart';
 import 'SplashPage.dart';
 
 void main() => runApp(MyApp());
@@ -12,10 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.blue,
        // visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SignInPage(),
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
